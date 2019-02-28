@@ -1,0 +1,11 @@
+{
+  "/local_server/*": {
+    "target": "http://localhost:3000",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/local_server": ""
+    }
+  }
+}

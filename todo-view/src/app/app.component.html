@@ -1,0 +1,15 @@
+<section>
+  <h1>Todos</h1>
+  <h3>New Todo</h3>
+  <input placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+  <h3>Todo List</h3>
+  <ul>
+    <li *ngFor="let todo of (todos$ | async)">{{ todo.title }}</li>
+  </ul>
+  <h3>Search Todo</h3>
+  <input placeholder="Search text?" [(ngModel)]="searchText" (keyup.enter)="searchTodos()">
+  <h3>Search Result</h3>
+  <ul>
+    <li *ngFor="let searchTodo of (searchResult$ | async)">{{ searchTodo._source.todotext }}</li>
+  </ul>
+</section>
