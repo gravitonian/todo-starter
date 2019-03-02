@@ -1,4 +1,3 @@
-// const cors = require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
 const { Pool } = require('pg');
@@ -15,13 +14,6 @@ app.use(
         extended: true
     })
 );
-/*
-let corsOptions = {
-    origin: 'http://localhost:4200',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-app.use(cors(corsOptions));
-*/
 
 // Postgres Client Setup /////////////////////////////////////////////////////
 const postgresClient = new Pool({
